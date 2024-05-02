@@ -1,0 +1,15 @@
+anchor=bottom-right
+font=Iosevka Nerd Font
+background-color=transparent
+text-color=#c0caf5
+width=320
+margin=0,23,23
+padding=10
+border-size=1
+border-color=#414868
+border-radius=5
+default-timeout=10000
+group-by=summary
+
+[grouped]
+format=<b>%s</b>\n%b

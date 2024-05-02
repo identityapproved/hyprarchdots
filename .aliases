@@ -1,0 +1,12 @@
+alias zshconfig="nvim ~/.zshrc"
+alias tmuxconfig="nvim ~/.config/tmux/tmux.conf"
+
+alias fcd="cd ~ && cd \$(fzf | sed 's/\/[^\/]*$//')"
+
+alias v='nvim' # default Neovim config
+alias vz='NVIM_APPNAME=nvim-lazyvim nvim' # LazyVim
+alias vc='NVIM_APPNAME=nvim-nvchad nvim' # NvChad
+alias vk='NVIM_APPNAME=nvim-kickstart nvim' # Kickstart
+alias va='NVIM_APPNAME=nvim-astrovim nvim' # AstroVim
+alias vw='NVIM_APPNAME=nvim-wiki nvim' # WikiVim
+alias vl='~/.local/bin/lvim' # LunarVim
