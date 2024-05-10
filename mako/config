@@ -1,15 +1,31 @@
 anchor=bottom-right
 font=Iosevka Nerd Font
-background-color=transparent
+background-color=#24283b
 text-color=#c0caf5
-width=320
+text-alignment=right
+width=230
+height=123
 margin=0,23,23
 padding=10
 border-size=1
 border-color=#414868
 border-radius=5
-default-timeout=10000
+default-timeout=2300
+ignore-timeout=1
 group-by=summary
+
+actions=1
 
 [grouped]
 format=<b>%s</b>\n%b
+
+[urgency=low]
+default-timeout=2300
+
+[urgency=normal]
+default-timeout=10000
+
+[urgency=high]
+border-color=#c53b53
+text-color=#ff757f
+default-timeout=0

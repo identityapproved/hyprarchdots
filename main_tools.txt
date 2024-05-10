@@ -3,8 +3,10 @@ gtk4
 hyprpaper
 hyprlock
 alacritty
+kitty
 wofi
 wlogout
+yazi
 libnotify
 mako
 tldr
@@ -14,7 +16,6 @@ ripgrep
 fd
 unzip
 neovim
-vifm
 tmux
 zsh
 fzf
@@ -35,3 +36,8 @@ clang
 go
 python
 ufw
+meson
+ninja
+boost
+reflector
+audacious
