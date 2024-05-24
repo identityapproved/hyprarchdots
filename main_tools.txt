@@ -5,12 +5,15 @@ hyprlock
 alacritty
 kitty
 wofi
+wl-clipboard
+waybar
 wlogout
 yazi
 libnotify
 mako
 tldr
 gcc
+gdb
 make
 ripgrep
 fd
@@ -41,3 +44,5 @@ ninja
 boost
 reflector
 audacious
+mpv
+ntfs-3g
