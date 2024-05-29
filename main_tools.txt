@@ -46,3 +46,4 @@ reflector
 audacious
 mpv
 ntfs-3g
+lazygit
