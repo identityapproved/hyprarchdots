@@ -47,3 +47,4 @@ audacious
 mpv
 ntfs-3g
 lazygit
+translate-shell
