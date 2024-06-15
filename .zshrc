@@ -12,7 +12,7 @@ zstyle ':omz:update' mode auto      # update automatically without asking
 
 HIST_STAMPS="dd.mm.yyyy"
 
-# Custom plugins
+# Plugins
 # https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md
 # https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md
 # https://github.com/zshzoo/cd-ls
@@ -25,18 +25,8 @@ plugins=(git gitignore web-search pip python zsh-syntax-highlighting zsh-autosug
 source $ZSH/oh-my-zsh.sh
 source $HOME/.aliases
 
-vv() {
-  # Assumes all configs exist in directories named ~/.config/nvim-*
-  local config=$(fd --max-depth 1 --glob 'nvim-*' ~/.config | fzf --prompt="Neovim Configs > " --height=~50% --layout=reverse --border --exit-0)
- 
-  # If I exit fzf without selecting a config, don't open Neovim
-  [[ -z $config ]] && echo "No config selected" && return
- 
-  # Open Neovim with the selected config
-  NVIM_APPNAME=$(basename $config) nvim
-}
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_OPTS='--reverse --preview="bat {}" --info=inline --color=fg:#f8f8f2,bg:-1,hl:#bd93f9 --color=fg+:#f8f8f2,bg+:-1,gutter:-1,hl+:#bd93f9 --color=info:#ffb86c,prompt:#50fa7b,pointer:#ff79c6 --color=marker:#ff79c6,spinner:#ffb86c,header:#6272a4'
 
+eval "$(zoxide init zsh)"
 eval "$(fnm env --use-on-cd)"
