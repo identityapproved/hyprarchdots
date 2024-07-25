@@ -2,7 +2,6 @@ hyprland
 gtk4
 hyprpaper
 hyprlock
-alacritty
 kitty
 wofi
 wl-clipboard
@@ -23,6 +22,7 @@ tmux
 zsh
 fzf
 bat
+zoxide
 virtualbox
 virtualbox-ext-oracle
 zathura
@@ -48,3 +48,5 @@ mpv
 ntfs-3g
 lazygit
 translate-shell
+rsync
+thefuck

@@ -1,10 +1,14 @@
 alias zshconfig="nvim ~/.zshrc"
 alias tmuxconfig="nvim ~/.config/tmux/tmux.conf"
 
+alias q="exit"
 alias fman="compgen -c | fzf --height 40% --layout reverse --border --no-preview |  xargs man"
 alias ftldr="compgen -c | fzf --height 40% --layout reverse --border --no-preview |  xargs tldr"
 alias fv="nvim \$(fzf)"
 alias fcd="cd ~ && cd \$(fzf | sed 's/\/[^\/]*$//')"
+alias em="emacsclient -c -a 'emacs'"
 alias v='nvim' # default Neovim config
+alias vn='NVIM_APPNAME=nvim-normal nvim' # Normal Nvim
 alias yz='yazi'
 alias lz='lazygit'
+alias mpvpl='find . -type d | fzf | xargs -I{} find "{}" -type f | sort -V | mpv --playlist=-'
