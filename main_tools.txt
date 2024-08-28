@@ -14,6 +14,9 @@ tldr
 gcc
 gdb
 make
+bc
+man-db
+tree
 ripgrep
 fd
 unzip
@@ -32,6 +35,7 @@ zathura-pdf-mupdf
 zathura-ps
 powerline-fonts
 ttf-iosevka-nerd
+ttf-joypixels
 htop
 iftop
 fpc
@@ -50,3 +54,4 @@ lazygit
 translate-shell
 rsync
 thefuck
+task

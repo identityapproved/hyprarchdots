@@ -6,6 +6,7 @@ export ZSH="$HOME/.oh-my-zsh"
 export EDITOR="/usr/bin/nvim"
 export PATH="$HOME/.emacs.d/bin:$PATH"
 export GOPATH="$HOME/go"
+export XDG_DATA_HOME=$HOME/.local/share
 
 ZSH_THEME="random"
 
@@ -40,3 +41,5 @@ function yy() {
 
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(fnm env --use-on-cd)"
+
+eval $(thefuck --alias)
