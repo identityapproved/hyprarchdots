@@ -41,7 +41,7 @@ fi
 # Install tools from list_tools.txt
 while read -r tool; do
   yay -S --noconfirm "$tool"
-done < main_tools.txt
+done < list_tools.txt
 
 # Install optional tools with user confirmation
 # while read -r optional_tool; do
@@ -54,10 +54,10 @@ done < main_tools.txt
 # nvm use node
 
 # Check and install cargo (Rust)
-if ! command -v cargo >/dev/null 2>&1; then
-  echo "cargo is not installed. Installing cargo. RUSTUP!"
-  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-fi
+# if ! command -v cargo >/dev/null 2>&1; then
+#   echo "cargo is not installed. Installing cargo. RUSTUP!"
+#   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+# fi
 
 # Install Oh My Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"

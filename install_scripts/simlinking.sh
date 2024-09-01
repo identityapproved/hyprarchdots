@@ -24,6 +24,7 @@ directories=("${directories[@]%/}")
 # Create symbolic links for .zshrc and .aliases
 ln -sf "$DOTFILES_DIR/.zshrc" "$HOME/.zshrc"
 ln -sf "$DOTFILES_DIR/.aliases" "$HOME/.aliases"
+ln -sf "$DOTFILES_DIR/.taskrc" "$HOME/.taskrc"
 
 for dir in "${directories[@]}"; do
   target_dir="$CONFIG_DIR/$(basename "$dir")"
@@ -41,7 +42,7 @@ for dir in "${directories[@]}"; do
     mv "$target_dir" "$target_dir.bak"
     echo "Existing directory '$target_dir' renamed to '$target_dir.bak'"
   fi
-  
+
   # Create symlink
   ln -sfn "$dir" "$target_dir"
   echo "Created symlink: $target_dir"

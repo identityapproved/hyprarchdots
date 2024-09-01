@@ -5,7 +5,6 @@ hyprlock
 kitty
 wofi
 wl-clipboard
-waybar
 wlogout
 yazi
 libnotify
@@ -20,14 +19,12 @@ tree
 ripgrep
 fd
 unzip
-neovim
 tmux
 zsh
 fzf
 bat
+lolcat
 zoxide
-virtualbox
-virtualbox-ext-oracle
 zathura
 zathura-cb
 zathura-djvu
@@ -41,7 +38,9 @@ iftop
 fpc
 clang
 go
-python
+lua
+luajit
+luarocks
 ufw
 meson
 ninja
