@@ -2,6 +2,7 @@ hyprland
 gtk4
 hyprpaper
 hyprlock
+zsh
 kitty
 wofi
 wl-clipboard
@@ -20,7 +21,6 @@ ripgrep
 fd
 unzip
 tmux
-zsh
 fzf
 bat
 lolcat
