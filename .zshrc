@@ -5,6 +5,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 export EDITOR="/usr/bin/nvim"
 export PATH="$HOME/.emacs.d/bin:$PATH"
+# export EMACS="$HOME/.config/emacs/bin"
 export GOPATH="$HOME/go"
 export XDG_DATA_HOME=$HOME/.local/share
 
@@ -22,7 +23,7 @@ HIST_STAMPS="dd.mm.yyyy"
 # https://github.com/jeffreytse/zsh-vi-mode
 # https://github.com/djui/alias-tips
 # https://github.com/thirteen37/fzf-alias
-plugins=(git gitignore web-search pip python zsh-syntax-highlighting zsh-autosuggestions docker docker-compose zsh-vi-mode cd-ls zsh-git-fzf zsh-wakatime alias-tips ufw themes fzf-alias archlinux)
+plugins=(git gitignore web-search pip python zsh-syntax-highlighting zsh-autosuggestions docker docker-compose zsh-vi-mode cd-ls zsh-git-fzf zsh-wakatime alias-tips ufw themes fzf-alias archlinux emacs)
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.aliases

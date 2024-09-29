@@ -48,6 +48,7 @@ boost
 reflector
 audacious
 mpv
+smplayer
 ntfs-3g
 lazygit
 translate-shell

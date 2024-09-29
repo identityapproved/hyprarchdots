@@ -4,9 +4,9 @@ mode = "stretch"
 sorting = "random"
 
 # Wallpapers from the following source:
-# https://github.com/D3Ext/aesthetic-wallpapers
+# https://github.com/identityapproved/nightwallpapers
 [any]
-path = "/home/identityapproved/git/aesthetic-wallpapers/images"
+path = "/home/identityapproved/git/nightwallpapers/papers"
 
 [DVI-D-1]
 mode = "center"
