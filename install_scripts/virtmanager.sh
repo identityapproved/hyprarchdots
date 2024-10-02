@@ -36,12 +36,12 @@ fi
 
 # Install virt-manager and dependencies
 echo "Installing virt-manager and dependencies..." | lolcat -af
-install_packages virt-manager qemu vde2 ebtables nftables dnsmasq bridge-utils ovmf
+install_packages virt-manager qemu-full vde2 ebtables nftables dnsmasq bridge-utils ovmf virt-viewer
 
 # Enable and start libvirtd service
 echo "Enabling and starting libvirtd service..." | lolcat -af
-sudo systemctl enable libvirtd.service
-sudo systemctl start libvirtd.service
+sudo systemctl enable libvirtd.service libvirtd.socket libvirt-guests.service
+sudo systemctl start libvirtd.service libvirtd.socket libvirt-guests.service
 
 # Configure libvirtd.conf
 echo "Configuring libvirtd.conf..." | lolcat -af
@@ -62,3 +62,4 @@ echo "Adding current user to libvirt group..." | lolcat -af
 sudo usermod -aG libvirt $USER
 
 (echo "Installation complete!" && echo "Please log out and log back in for group changes to take effect." && echo "You can then start virt-manager by running 'virt-manager' in the terminal.") | lolcat -af
+echo "For change theme to dark mode, set 'gtk-application-prefer-dark-theme=true' in ~/.config/gtk-3.0/settings.ini" | lolcat -af
