@@ -1,15 +1,8 @@
 #!/bin/bash
 
 # Install ufw if not installed
-if ! command -v yay >/dev/null 2>&1; then
-  echo "yay not found. Installing ufw using pacman..."
-  pacman -S --noconfirm ufw
-else
-  if ! yay -Qi ufw >/dev/null 2>&1; then
-    echo "Installing ufw using yay..."
-    yay -S --noconfirm ufw
-  fi
-fi
+# add checkings and install
+
 
 # Disable ufw if it's enabled
 ufw disable

@@ -12,7 +12,7 @@ packages=(
 
 # Function to install package using yay
 install_package() {
-  sudo yay -S --noconfirm "$1" || { echo "Failed to install $1. Exiting." >&2; exit 1; }
+  paru -S --noconfirm "$1" || { echo "Failed to install $1. Exiting." >&2; exit 1; }
 }
 
 # Install each package

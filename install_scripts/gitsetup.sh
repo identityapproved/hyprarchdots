@@ -11,6 +11,7 @@ git config --global rerere.enabled true
 git config --global merge.tool vimdiff
 git config --global merge.conflictstyle diff3
 git config --global mergetool.prompt false
+git config --global help.autocorrect prompt
 
 echo "Git configuration has been updated."
 

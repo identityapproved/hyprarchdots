@@ -31,6 +31,10 @@ source $HOME/.aliases
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_OPTS='--reverse --preview="bat {}" --info=inline --color=fg:#f8f8f2,bg:-1,hl:#bd93f9 --color=fg+:#f8f8f2,bg+:-1,gutter:-1,hl+:#bd93f9 --color=info:#ffb86c,prompt:#50fa7b,pointer:#ff79c6 --color=marker:#ff79c6,spinner:#ffb86c,header:#6272a4'
 
+# Loads FZF keybindings, replacing native reverse search etc with FZF
+[[ -e "/usr/share/fzf/key-bindings.zsh" ]] \
+  && source "/usr/share/fzf/key-bindings.zsh"
+
 function yy() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
 	yazi "$@" --cwd-file="$tmp"
@@ -40,7 +44,21 @@ function yy() {
 	rm -f -- "$tmp"
 }
 
+# nVim Fuzy Find
+function vff() {
+  # All config paths are prefixed with ~/.config/nvim-
+  local config=$(fd --max-depth 1 --glob 'nvim-*' ~/.config | fzf --prompt="Neovim Configs > " --height=15% --layout=reverse --border --exit-0)
+
+  [[ -z $config ]] && echo "No config selected, Neovim not starting" && return
+
+  # Open Neovim with selected config
+  NVIM_APPNAME=$(basename $config) nvim $@
+}
+
 eval "$(zoxide init --cmd cd zsh)"
-eval "$(fnm env --use-on-cd)"
 
 eval $(thefuck --alias)
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

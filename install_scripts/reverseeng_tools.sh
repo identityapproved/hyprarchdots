@@ -2,7 +2,7 @@
 
 # Function to install a package using yay
 install_package() {
-    sudo yay -S --noconfirm "$1" || { echo "Failed to install $1. Exiting." >&2; exit 1; }
+    paru -S --noconfirm "$1" || { echo "Failed to install $1. Exiting." >&2; exit 1; }
 }
 
 # List of packages to install

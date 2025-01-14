@@ -3,7 +3,7 @@
 # Ensure Neovim is installed using yay
 if ! command -v nvim &> /dev/null; then
     echo "Neovim is not installed. Installing Neovim..."
-    yay -S --noconfirm neovim || { echo "Failed to install Neovim. Exiting."; exit 1; }
+    paru -S --noconfirm neovim || { echo "Failed to install Neovim. Exiting."; exit 1; }
 fi
 
 # Clone your fork of NormalNvim

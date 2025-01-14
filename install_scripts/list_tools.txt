@@ -7,6 +7,7 @@ kitty
 wofi
 wl-clipboard
 wlogout
+wpaperd
 yazi
 libnotify
 mako
@@ -33,6 +34,7 @@ zathura-ps
 powerline-fonts
 ttf-iosevka-nerd
 ttf-joypixels
+gnu-free-fonts
 htop
 iftop
 fpc
@@ -47,6 +49,7 @@ ninja
 boost
 reflector
 audacious
+obsidian
 mpv
 smplayer
 ntfs-3g
